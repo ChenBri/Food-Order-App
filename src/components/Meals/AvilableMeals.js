@@ -31,15 +31,13 @@ const DUMMY_MEALS = [
 const AvilableMeals = () => {
   return (
     <section className={classes.meals}>
-      <ul>
-        {DUMMY_MEALS.map((meal) => {
-          return (
-            <Card>
-              <MealItem meal={meal} key={meal.id} />
-            </Card>
-          );
-        })}
-      </ul>
+      <Card>
+        <ul>
+          {DUMMY_MEALS.map((meal) => {
+            return <MealItem meal={meal} key={meal.id} />;
+          })}
+        </ul>
+      </Card>
     </section>
   );
 };
